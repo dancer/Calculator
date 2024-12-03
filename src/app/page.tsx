@@ -345,9 +345,13 @@ export default function CalculatorPage() {
                           <SelectTrigger className="bg-zinc-800 border-zinc-700 text-zinc-100">
                             <SelectValue placeholder="Select state" />
                           </SelectTrigger>
-                          <SelectContent className="bg-zinc-800 border-zinc-700 text-white [&>*:hover]:bg-zinc-700 [&>*:hover]:text-white max-h-[300px]">
+                          <SelectContent className="bg-zinc-800 border-zinc-700 text-white max-h-[300px]">
                             {stateOptions.map((state) => (
-                                <SelectItem key={state.value} value={state.value}>
+                                <SelectItem 
+                                    key={state.value} 
+                                    value={state.value}
+                                    className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                                >
                                     {state.label}
                                 </SelectItem>
                             ))}
@@ -361,10 +365,25 @@ export default function CalculatorPage() {
                           <SelectTrigger className="bg-zinc-800 border-zinc-700 text-zinc-100">
                             <SelectValue placeholder="Select benefits package" />
                           </SelectTrigger>
-                          <SelectContent className="bg-zinc-800 border-zinc-700 text-white [&>*:hover]:bg-zinc-700 [&>*:hover]:text-white">
-                            <SelectItem value="basic">Basic (20% of salary)</SelectItem>
-                            <SelectItem value="standard">Standard (25% of salary)</SelectItem>
-                            <SelectItem value="premium">Premium (30% of salary)</SelectItem>
+                          <SelectContent className="bg-zinc-800 border-zinc-700 text-white">
+                            <SelectItem 
+                                value="basic"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                            >
+                                Basic (20% of salary)
+                            </SelectItem>
+                            <SelectItem 
+                                value="standard"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                            >
+                                Standard (25% of salary)
+                            </SelectItem>
+                            <SelectItem 
+                                value="premium"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                            >
+                                Premium (30% of salary)
+                            </SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -498,10 +517,25 @@ export default function CalculatorPage() {
                             <SelectTrigger className="bg-zinc-800 border-zinc-700 text-zinc-100">
                               <SelectValue placeholder="Select filing status" />
                             </SelectTrigger>
-                            <SelectContent className="bg-zinc-800 border-zinc-700 text-white [&>*:hover]:bg-zinc-700 [&>*:hover]:text-white">
-                              <SelectItem value="single">Single</SelectItem>
-                              <SelectItem value="married">Married</SelectItem>
-                              <SelectItem value="head">Head of Household</SelectItem>
+                            <SelectContent className="bg-zinc-800 border-zinc-700 text-white">
+                              <SelectItem 
+                                value="single"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                              >
+                                Single
+                              </SelectItem>
+                              <SelectItem 
+                                value="married"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                              >
+                                Married
+                              </SelectItem>
+                              <SelectItem 
+                                value="head"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                              >
+                                Head of Household
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
@@ -511,10 +545,25 @@ export default function CalculatorPage() {
                             <SelectTrigger className="bg-zinc-800 border-zinc-700 text-zinc-100">
                               <SelectValue placeholder="Select pay frequency" />
                             </SelectTrigger>
-                            <SelectContent className="bg-zinc-800 border-zinc-700 text-white [&>*:hover]:bg-zinc-700 [&>*:hover]:text-white">
-                              <SelectItem value="weekly">Weekly</SelectItem>
-                              <SelectItem value="biweekly">Bi-weekly</SelectItem>
-                              <SelectItem value="monthly">Monthly</SelectItem>
+                            <SelectContent className="bg-zinc-800 border-zinc-700 text-white">
+                              <SelectItem 
+                                value="weekly"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                              >
+                                Weekly
+                              </SelectItem>
+                              <SelectItem 
+                                value="biweekly"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                              >
+                                Bi-weekly
+                              </SelectItem>
+                              <SelectItem 
+                                value="monthly"
+                                className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                              >
+                                Monthly
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
@@ -526,9 +575,13 @@ export default function CalculatorPage() {
                           <SelectTrigger className="bg-zinc-800 border-zinc-700 text-zinc-100">
                             <SelectValue placeholder="Select state" />
                           </SelectTrigger>
-                          <SelectContent className="bg-zinc-800 border-zinc-700 text-white [&>*:hover]:bg-zinc-700 [&>*:hover]:text-white max-h-[300px]">
+                          <SelectContent className="bg-zinc-800 border-zinc-700 text-white max-h-[300px]">
                             {stateOptions.map((state) => (
-                                <SelectItem key={state.value} value={state.value}>
+                                <SelectItem 
+                                    key={state.value} 
+                                    value={state.value}
+                                    className="hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white data-[highlighted]:bg-zinc-700 data-[highlighted]:text-white cursor-pointer"
+                                >
                                     {state.label}
                                 </SelectItem>
                             ))}

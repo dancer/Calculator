@@ -7,11 +7,10 @@ const anthropic = new Anthropic({
 });
 
 const CACHE_KEY = 'tax-rates';
-const CACHE_DURATION = 24 * 60 * 60; // 24 hours in seconds
+const CACHE_DURATION = 24 * 60 * 60; 
 
 async function getTaxRates() {
     try {
-        // Try to get from cache first
         const cachedRates = await kv.get(CACHE_KEY);
         if (cachedRates) {
             console.log("Using cached tax rates");
@@ -50,7 +49,6 @@ async function getTaxRates() {
             throw new Error('Missing required state data');
         }
         
-        // Cache the rates
         await kv.set(CACHE_KEY, rates, { ex: CACHE_DURATION });
         return rates;
     } catch (error) {
