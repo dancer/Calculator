@@ -41,3 +41,5 @@ next-env.d.ts
 
 # tax rates cache
 tax-rates-cache.json
+
+.vercel
